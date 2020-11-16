@@ -1,0 +1,24 @@
+Noting down some 'todos' to explore/add in to the repository. Most will likely be around documentation
+for 'getting started', tooling and troubleshooting that I faced (If I can remember it all, some is in readme)
+
+Code:
+    ✔ Write a proto file to be implemented
+    ✔ Put together a basic server
+    ☐ Put together a basic client
+    ✔ Add persistence with a datastore so the API is a bit meaningful
+    ☐ Dockerise the app so it is easier to run
+        Eh, may not bother doing this... But it wouldn't take long to do either
+
+Documentation/Tooling:
+    ☐ 'Getting Started' information
+        ☐ Tooling, CLI, etc to get started
+        ☐ CLI commands and information on generating code from `.proto` files
+        ☐ Find good resources for writing proto files
+            Can always fall back on to the docs, but a nice concise guide or cheat sheet is always good to have
+    ☐ Link to tooling to help with testing a server without writing a client
+        Last time I looked at this, _years_ ago there wasn't much around or it was early stages
+        gRPC 'postman' style tool:
+        I accidentally stumbled across a tool that seems pretty neat and worked well with this app
+        https://github.com/uw-labs/bloomrpc
+            You 'import' the .proto file and it knows all of the methods/requests it can make
+            Auto populates request variables and you can send/receive responses.
