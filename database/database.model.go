@@ -7,7 +7,9 @@ type Database interface {
 	Delete(key string) (string, error)
 }
 
-// Factory looks up acording to the databaseName the database implementation
+// Factory takes the name of a database implementaion to try and create, or errors
+// if one has not been implemented. We can easily plug mongo or postgres in here
+// as long as they satisfy the interface above.
 func Factory(databaseName string) (Database, error) {
 	switch databaseName {
 	case "redis":
